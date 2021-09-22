@@ -1,6 +1,6 @@
 package HotelReservation;
 
-public class HotelDetails {
+public class MiamiHotelDetails {
     String hotel_name;
     int regular_customer_weekday_rate;
     int regular_customer_weekend_rate;
@@ -8,7 +8,7 @@ public class HotelDetails {
     int reward_customer_weekend_rate;
     int hotel_rating;
 
-    public HotelDetails(String hotel_name, int hotel_rating, int regular_customer_weekday_rate, int reward_customer_weekday_rate, int regular_customer_weekend_rate, int reward_customer_weekend_rate) {
+    public MiamiHotelDetails(String hotel_name, int hotel_rating, int regular_customer_weekday_rate, int reward_customer_weekday_rate, int regular_customer_weekend_rate, int reward_customer_weekend_rate) {
         this.hotel_name = hotel_name;
         this.regular_customer_weekday_rate = regular_customer_weekday_rate;
         this.regular_customer_weekend_rate = regular_customer_weekend_rate;
