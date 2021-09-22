@@ -1,16 +1,18 @@
 package HotelReservation;
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 import static HotelReservation.FindCheapestHotel.type;
 import static HotelReservation.HotelReservationMain.details;
 import static HotelReservation.HotelReservationMain.rate;
 
-public class FindCheapestHotelwithbestRated {
+public class BestRatedHotel {
     public int[] index = new int[3];
     public FindCheapestHotel function = new FindCheapestHotel();
 
-    public void cheapandbestratedhotel() throws Exception {
+    public void bestratedhotel() throws Exception {
         function.get_type();
         check_type();
 
@@ -28,25 +30,16 @@ public class FindCheapestHotelwithbestRated {
     }
 
     private void display_best_hotel() {
-        Integer min_rate = rate.stream().min(Comparator.comparing(n -> n.intValue())).get();
-        int check = 0;
-        while (check < rate.size()) {
-            if (min_rate.equals(rate.get(check))) {
-                index[check] = check;
-            }
-            check++;
+        List<Integer> rating = new ArrayList<Integer>();
+        int i = 0;
+        while (i < details.size()) {
+            rating.add(details.get(i).hotel_rating);
+            i++;
         }
-
-        String hotel = null;
-
-        int best_rate = 0;
-        for (int ind : index) {
-            if (best_rate < details.get(ind).getHotel_rating()) {
-                best_rate = details.get(ind).getHotel_rating();
-                hotel = details.get(ind).getHotel_name();
-            }
-        }
-        System.out.println("\nThe cheapest hotel " + hotel + "with rating of " + best_rate + " and with cost of " + min_rate + "$ per day....");
+        Integer best_rate = rating.stream().max(Comparator.comparing(n -> n.intValue())).get();
+        int index = rating.indexOf(best_rate);
+        String hotel = details.get(index).getHotel_name();
+        int rate = HotelReservationMain.rate.get(index);
+        System.out.println("\nThe hotel " + hotel + " with rating of " + best_rate + " and with cost of " + rate + "$ per day....");
     }
-
 }

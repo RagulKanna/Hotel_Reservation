@@ -16,10 +16,11 @@ public class HotelReservationMain {
         ChangeRateofHotel changerate = new ChangeRateofHotel();
         FindCheapestHotel findcheap = new FindCheapestHotel();
         FindCheapestHotelwithbestRated besthotel = new FindCheapestHotelwithbestRated();
+        BestRatedHotel topratedhotel=new BestRatedHotel();
         AddRating rating = new AddRating();
         defaultvalue();
         System.out.println("\nEnter the option to do operation");
-        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel\n    3-Ability to change rating of hotel\n    4-Ability to check cheapest with best rating");
+        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel\n    3-Ability to change rating of hotel\n    4-Ability to check cheapest with best rating\n    5-Ability to check best rated hotel");
         System.out.print("\nEnter the option as numbers : ");
         int option = scan.nextInt();
 
@@ -41,9 +42,14 @@ public class HotelReservationMain {
             break;
 
             case 4: {
-                besthotel.bestratedhotel();
+                besthotel.cheapandbestratedhotel();
             }
             break;
+
+            case 5:{
+                topratedhotel.bestratedhotel();
+            }
+
         }
     }
 
