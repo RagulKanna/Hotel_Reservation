@@ -19,20 +19,22 @@ public class HotelReservationMain {
         BestRatedHotel topratedhotel = new BestRatedHotel();
         AddRating rating = new AddRating();
         SpecialRewardRates rewardrate = new SpecialRewardRates();
+        HotelforReward reward = new HotelforReward();
         System.out.println("\nEnter the option to do operation");
         System.out.println("\nOperations: \n    1-Ability to change the rates of hotel" +
                 "\n    2-Ability to check cheapesthotel" +
                 "\n    3-Ability to change rating of hotel" +
                 "\n    4-Ability to check cheapest with best rating" +
                 "\n    5-Ability to check best rated hotel" +
-                "\n    6-Ability to do with special rates");
+                "\n    6-Ability to do with special rates" +
+                "\n    7-Ability to find cheap and best hotel for reward customer");
         System.out.print("\nEnter the option as numbers : ");
         int option = scan.nextInt();
 
         switch (option) {
 
             case 1: {
-                changerate.change_rate(110,90,150,50,220,150);
+                changerate.change_rate(110, 90, 150, 50, 220, 150);
             }
             break;
 
@@ -42,7 +44,7 @@ public class HotelReservationMain {
             break;
 
             case 3: {
-                rating.add_rating(3,4,5);
+                rating.add_rating(3, 4, 5);
             }
             break;
 
@@ -57,12 +59,16 @@ public class HotelReservationMain {
             break;
 
             case 6: {
-                rewardrate.change_reward_rate(80,80,110,50,100,40);
+                rewardrate.change_reward_rate(80, 80, 110, 50, 100, 40);
+            }
+            break;
+
+            case 7: {
+                reward.find_hotel_for_rewards();
             }
             break;
         }
     }
-
 
 
 }

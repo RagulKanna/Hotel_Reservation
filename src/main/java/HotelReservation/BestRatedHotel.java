@@ -7,12 +7,12 @@ import java.util.List;
 import static HotelReservation.FindCheapestHotel.type;
 
 
-public class BestRatedHotel extends HotelReservationMain{
+public class BestRatedHotel extends HotelReservationMain {
     public int[] index = new int[3];
     public FindCheapestHotel function = new FindCheapestHotel();
 
     public void bestratedhotel() throws Exception {
-        AddRating.add_rating(3,4,5);
+        AddRating.add_rating(3, 4, 5);
         function.get_type();
         check_type();
 

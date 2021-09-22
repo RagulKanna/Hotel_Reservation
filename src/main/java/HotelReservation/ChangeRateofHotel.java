@@ -1,13 +1,10 @@
 package HotelReservation;
 
 
+public class ChangeRateofHotel extends HotelReservationMain {
 
 
-
-public class ChangeRateofHotel extends HotelReservationMain{
-
-
-    public static void change_rate(int lackwood_weekday_rate,int lackwood_weekend_rate,int bridgewood_weekday_rate,int bridgewood_weekend_rate,int ridgewood_weekday_rate,int ridgewood_weekend_rate) {
+    public static void change_rate(int lackwood_weekday_rate, int lackwood_weekend_rate, int bridgewood_weekday_rate, int bridgewood_weekend_rate, int ridgewood_weekday_rate, int ridgewood_weekend_rate) {
 
 
         System.out.println("\nThe weekday and weekend rate for Lackwood hotel");

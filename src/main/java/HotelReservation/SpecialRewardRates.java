@@ -1,12 +1,10 @@
 package HotelReservation;
 
 
-
-public class SpecialRewardRates extends HotelReservationMain{
-
+public class SpecialRewardRates extends HotelReservationMain {
 
 
-    public void change_reward_rate(int lackwood_reward_weekday_rate, int lackwood_reward_weekend_rate, int bridgewood_reward_weekday_rate, int bridgewood_reward_weekend_rate, int ridgewood_reward_weekday_rate, int ridgewood_reward_weekend_rate) {
+    public static void change_reward_rate(int lackwood_reward_weekday_rate, int lackwood_reward_weekend_rate, int bridgewood_reward_weekday_rate, int bridgewood_reward_weekend_rate, int ridgewood_reward_weekday_rate, int ridgewood_reward_weekend_rate) {
 
         System.out.println("\nThe weekday and weekend rate for Lackwood hotel");
         System.out.print("\n weekday rate : $80");
@@ -33,13 +31,13 @@ public class SpecialRewardRates extends HotelReservationMain{
 
     }
 
-    private void weekend_rating_map() {
+    private static void weekend_rating_map() {
         for (int i = 0; i < details.size(); i++) {
             hotelmap.put(details.get(i).getHotel_name(), details.get(i).getReward_customer_weekend_rate());
         }
     }
 
-    private void weekday_rating_map() {
+    private static void weekday_rating_map() {
         for (int i = 0; i < details.size(); i++) {
             hotelmap.put(details.get(i).getHotel_name(), details.get(i).getReward_customer_weekday_rate());
         }

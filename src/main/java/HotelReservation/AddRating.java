@@ -6,7 +6,7 @@ import static HotelReservation.HotelReservationMain.*;
 public class AddRating {
 
 
-    public static void add_rating(int lackwood_rating,int bridgewood_rating, int ridgewood_rating) {
+    public static void add_rating(int lackwood_rating, int bridgewood_rating, int ridgewood_rating) {
         System.out.print("\nThe rating for lackwood hotel : 3");
 
         MiamiHotelDetails hotel1 = new MiamiHotelDetails("Lackwood", 3, 110, 110, 90, 90);

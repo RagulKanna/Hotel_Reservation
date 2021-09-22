@@ -9,8 +9,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-
-public class FindCheapestHotel extends HotelReservationMain{
+public class FindCheapestHotel extends HotelReservationMain {
     public static int check, count;
     public static int[] index = new int[3];
     public static String type;
@@ -22,7 +21,7 @@ public class FindCheapestHotel extends HotelReservationMain{
     }
 
     public void get_type() throws Exception {
-        ChangeRateofHotel.change_rate(110,90,150,50,220,150);
+        ChangeRateofHotel.change_rate(110, 90, 150, 50, 220, 150);
         System.out.print("\nEnter the type of customer (Regular or Reward): ");
         type = scan.next();
         System.out.print("\nEnter the date range (ie.howmanydays): ");
@@ -50,7 +49,7 @@ public class FindCheapestHotel extends HotelReservationMain{
             System.out.println("\nYou entered wrong type....");
     }
 
-    public void check_hotel_rate_reward() {
+    public static void check_hotel_rate_reward() {
         int i = 0;
         while (i < details.size()) {
             int weekday_rate = details.get(i).getReward_customer_weekday_rate() * Weekday_count;
@@ -60,7 +59,7 @@ public class FindCheapestHotel extends HotelReservationMain{
         }
     }
 
-    public void check_hotel_rate_regular() {
+    public static void check_hotel_rate_regular() {
         int i = 0;
         while (i < details.size()) {
             int weekday_rate = details.get(i).getRegular_customer_weekday_rate() * Weekday_count;
@@ -80,8 +79,8 @@ public class FindCheapestHotel extends HotelReservationMain{
 
     private void display() {
         Integer min_rate = rate.stream().min(Comparator.comparing(n -> n.intValue())).get();
-        check=0;
-        count=0;
+        check = 0;
+        count = 0;
         while (check < rate.size()) {
             if (min_rate.equals(rate.get(check))) {
                 index[check] = check;

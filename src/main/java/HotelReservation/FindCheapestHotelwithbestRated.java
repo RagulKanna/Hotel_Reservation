@@ -5,12 +5,11 @@ import java.util.Comparator;
 import static HotelReservation.FindCheapestHotel.type;
 
 
-public class FindCheapestHotelwithbestRated extends HotelReservationMain{
+public class FindCheapestHotelwithbestRated extends HotelReservationMain {
     public int[] index = new int[3];
     public FindCheapestHotel function = new FindCheapestHotel();
 
     public void cheapandbestratedhotel() throws Exception {
-        AddRating.add_rating(3,4,5);
         function.get_type();
         check_type();
 
@@ -29,10 +28,12 @@ public class FindCheapestHotelwithbestRated extends HotelReservationMain{
 
     private void display_best_hotel() {
         Integer min_rate = rate.stream().min(Comparator.comparing(n -> n.intValue())).get();
-        int check = 0;
+        int check = 0, count = 0;
+        System.out.println(rate.size());
         while (check < rate.size()) {
-            if (min_rate.equals(rate.get(check))) {
-                index[check] = check;
+            if (rate.get(check).equals(min_rate)) {
+                index[count] = check;
+                count++;
             }
             check++;
         }
