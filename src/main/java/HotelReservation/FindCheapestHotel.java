@@ -10,6 +10,7 @@ import java.util.Locale;
 
 import static HotelReservation.HotelReservationMain.*;
 
+
 public class FindCheapestHotel {
     public void find_cheapest_hotel() throws Exception {
 
@@ -45,9 +46,28 @@ public class FindCheapestHotel {
         }
 
         Integer min_rate = rate.stream().min(Comparator.comparing(n -> n.intValue())).get();
-        Integer index = rate.indexOf(min_rate);
-        String hotel = details.get(index).getHotel_name();
-        System.out.println("\ncheapest hotel is " + hotel + " for rate " + min_rate + "$");
+        int check = 0;
+        int count = 0;
+        int index[] = new int[3];
+        while (check < rate.size()) {
+            if (min_rate.equals(rate.get(check))) {
+                index[check] = check;
+                count++;
+            }
+            check++;
+        }
+        String hotel;
+        System.out.print("\nThe cheapest hotel ");
+
+        for (int j = 0; j < count; j++) {
+            hotel = details.get(index[j]).getHotel_name();
+            if (j == 0) {
+                System.out.print(hotel + " ");
+            } else {
+                System.out.print(" and " + hotel);
+            }
+        }
+        System.out.print("with rate " + min_rate + "$....");
     }
 
     private void check_hotel_rate_regular() {
@@ -60,9 +80,28 @@ public class FindCheapestHotel {
         }
 
         Integer min_rate = rate.stream().min(Comparator.comparing(n -> n.intValue())).get();
-        Integer index = rate.indexOf(min_rate);
-        String hotel = details.get(index).getHotel_name();
-        System.out.println("\ncheapest hotel is " + hotel + " for rate " + min_rate + "$");
+        int check = 0;
+        int count = 0;
+        int index[] = new int[3];
+        while (check < rate.size()) {
+            if (min_rate.equals(rate.get(check))) {
+                index[check] = check;
+                count++;
+            }
+            check++;
+
+        }
+        String hotel;
+        System.out.print("\nThe cheapest hotel ");
+        for (int j = 0; j < count; j++) {
+            hotel = details.get(index[j]).getHotel_name();
+            if (j == 0) {
+                System.out.print(hotel + " ");
+            } else {
+                System.out.print(" and " + hotel);
+            }
+        }
+        System.out.print(" with rate " + min_rate + "$");
     }
 
     private String day(String userdate) throws ParseException {

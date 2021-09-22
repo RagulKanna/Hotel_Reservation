@@ -1,14 +1,17 @@
 package HotelReservation;
 
+import java.util.Map;
+
 import static HotelReservation.HotelReservationMain.*;
 
 
 public class ChangeRateofHotel {
 
-    public static int lackwood_weekday_rate = 110, lackwood_weekend_rate = 80, bridgewood_weekday_rate = 160, bridgewood_weekend_rate = 110, ridgewood_weekday_rate = 220, ridgewood_weekend_rate = 100;
+    public static int lackwood_weekday_rate, lackwood_weekend_rate, bridgewood_weekday_rate, bridgewood_weekend_rate, ridgewood_weekday_rate, ridgewood_weekend_rate;
 
 
     public void change_rate() {
+
 
         System.out.println("\nEnter the weekday and weekend rate for each hotels...");
         System.out.println("\nEnter the weekday and weekend rate for Lackwood hotel");
