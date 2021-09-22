@@ -14,9 +14,10 @@ public class HotelReservationMain {
 
         ChangeRateofHotel changerate = new ChangeRateofHotel();
         FindCheapestHotel findcheap = new FindCheapestHotel();
+        AddRating rating = new AddRating();
         defaultvalue();
         System.out.println("\nEnter the option to do operation");
-        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel");
+        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel\n    3-Ability to change rating of hotel");
         System.out.print("\nEnter the option as numbers : ");
         int option = scan.nextInt();
 
@@ -29,6 +30,11 @@ public class HotelReservationMain {
 
             case 2: {
                 findcheap.find_cheapest_hotel();
+            }
+            break;
+
+            case 3: {
+                rating.add_rating();
             }
             break;
         }
