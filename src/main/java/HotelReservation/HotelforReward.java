@@ -12,6 +12,7 @@ public class HotelforReward extends HotelReservationMain {
     public static int[] index = new int[3];
 
     public static void find_hotel_for_rewards() throws Exception {
+        System.out.println("\nImplemented Java Streams...");
         get_type();
         check_hotel_rate_reward();
         display_best_hotel();
