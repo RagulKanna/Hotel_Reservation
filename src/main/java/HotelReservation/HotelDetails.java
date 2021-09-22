@@ -10,11 +10,11 @@ public class HotelDetails {
 
     public HotelDetails(String hotel_name, int hotel_rating, int regular_customer_weekday_rate, int reward_customer_weekday_rate, int regular_customer_weekend_rate, int reward_customer_weekend_rate) {
         this.hotel_name = hotel_name;
-        this.hotel_rating = hotel_rating;
         this.regular_customer_weekday_rate = regular_customer_weekday_rate;
         this.regular_customer_weekend_rate = regular_customer_weekend_rate;
         this.reward_customer_weekday_rate = reward_customer_weekday_rate;
         this.reward_customer_weekend_rate = reward_customer_weekend_rate;
+        this.hotel_rating = hotel_rating;
     }
 
     public int getHotel_rating() {
