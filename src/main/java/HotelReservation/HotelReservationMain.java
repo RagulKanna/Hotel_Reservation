@@ -9,15 +9,17 @@ public class HotelReservationMain {
     public static Map<String, Integer> hotelmap = new HashMap<String, Integer>();
     public static Scanner scan = new Scanner(System.in);
 
+
     public static void main(String[] args) throws Exception {
 
 
         ChangeRateofHotel changerate = new ChangeRateofHotel();
         FindCheapestHotel findcheap = new FindCheapestHotel();
+        FindCheapestHotelwithbestRated besthotel = new FindCheapestHotelwithbestRated();
         AddRating rating = new AddRating();
         defaultvalue();
         System.out.println("\nEnter the option to do operation");
-        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel\n    3-Ability to change rating of hotel");
+        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel\n    3-Ability to change rating of hotel\n    4-Ability to check cheapest with best rating");
         System.out.print("\nEnter the option as numbers : ");
         int option = scan.nextInt();
 
@@ -37,9 +39,14 @@ public class HotelReservationMain {
                 rating.add_rating();
             }
             break;
-        }
 
+            case 4: {
+                besthotel.bestratedhotel();
+            }
+            break;
+        }
     }
+
 
     private static void defaultvalue() {
         MiamiHotelDetails hotel1 = new MiamiHotelDetails("Lackwood", 3, 110, 110, 90, 90);
