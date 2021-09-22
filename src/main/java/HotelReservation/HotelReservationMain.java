@@ -20,6 +20,7 @@ public class HotelReservationMain {
         AddRating rating = new AddRating();
         SpecialRewardRates rewardrate = new SpecialRewardRates();
         HotelforReward reward = new HotelforReward();
+        CheapandBestHotelforRegular rewardbest = new CheapandBestHotelforRegular();
         System.out.println("\nEnter the option to do operation");
         System.out.println("\nOperations: \n    1-Ability to change the rates of hotel" +
                 "\n    2-Ability to check cheapesthotel" +
@@ -27,7 +28,8 @@ public class HotelReservationMain {
                 "\n    4-Ability to check cheapest with best rating" +
                 "\n    5-Ability to check best rated hotel" +
                 "\n    6-Ability to do with special rates" +
-                "\n    7-Ability to find cheap and best hotel for reward customer");
+                "\n    7-Ability to find cheap and best hotel for reward customer" +
+                "\n    8-Ability to find cheap and best rated hotel for reward customer");
         System.out.print("\nEnter the option as numbers : ");
         int option = scan.nextInt();
 
@@ -67,6 +69,10 @@ public class HotelReservationMain {
                 reward.find_hotel_for_rewards();
             }
             break;
+
+            case 8: {
+                rewardbest.find_best_hotel_for_regular();
+            }
         }
     }
 
