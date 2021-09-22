@@ -8,10 +8,9 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
 
-import static HotelReservation.HotelReservationMain.*;
 
 
-public class FindCheapestHotel {
+public class FindCheapestHotel extends HotelReservationMain{
     public static int check, count;
     public static int[] index = new int[3];
     public static String type;
@@ -23,6 +22,7 @@ public class FindCheapestHotel {
     }
 
     public void get_type() throws Exception {
+        ChangeRateofHotel.change_rate(110,90,150,50,220,150);
         System.out.print("\nEnter the type of customer (Regular or Reward): ");
         type = scan.next();
         System.out.print("\nEnter the date range (ie.howmanydays): ");

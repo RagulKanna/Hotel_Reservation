@@ -3,14 +3,14 @@ package HotelReservation;
 import java.util.Comparator;
 
 import static HotelReservation.FindCheapestHotel.type;
-import static HotelReservation.HotelReservationMain.details;
-import static HotelReservation.HotelReservationMain.rate;
 
-public class FindCheapestHotelwithbestRated {
+
+public class FindCheapestHotelwithbestRated extends HotelReservationMain{
     public int[] index = new int[3];
     public FindCheapestHotel function = new FindCheapestHotel();
 
     public void cheapandbestratedhotel() throws Exception {
+        AddRating.add_rating(3,4,5);
         function.get_type();
         check_type();
 

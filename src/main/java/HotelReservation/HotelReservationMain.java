@@ -16,18 +16,23 @@ public class HotelReservationMain {
         ChangeRateofHotel changerate = new ChangeRateofHotel();
         FindCheapestHotel findcheap = new FindCheapestHotel();
         FindCheapestHotelwithbestRated besthotel = new FindCheapestHotelwithbestRated();
-        BestRatedHotel topratedhotel=new BestRatedHotel();
+        BestRatedHotel topratedhotel = new BestRatedHotel();
         AddRating rating = new AddRating();
-        defaultvalue();
+        SpecialRewardRates rewardrate = new SpecialRewardRates();
         System.out.println("\nEnter the option to do operation");
-        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel\n    2-Ability to check cheapesthotel\n    3-Ability to change rating of hotel\n    4-Ability to check cheapest with best rating\n    5-Ability to check best rated hotel");
+        System.out.println("\nOperations: \n    1-Ability to change the rates of hotel" +
+                "\n    2-Ability to check cheapesthotel" +
+                "\n    3-Ability to change rating of hotel" +
+                "\n    4-Ability to check cheapest with best rating" +
+                "\n    5-Ability to check best rated hotel" +
+                "\n    6-Ability to do with special rates");
         System.out.print("\nEnter the option as numbers : ");
         int option = scan.nextInt();
 
         switch (option) {
 
             case 1: {
-                changerate.change_rate();
+                changerate.change_rate(110,90,150,50,220,150);
             }
             break;
 
@@ -37,7 +42,7 @@ public class HotelReservationMain {
             break;
 
             case 3: {
-                rating.add_rating();
+                rating.add_rating(3,4,5);
             }
             break;
 
@@ -46,22 +51,18 @@ public class HotelReservationMain {
             }
             break;
 
-            case 5:{
+            case 5: {
                 topratedhotel.bestratedhotel();
             }
+            break;
 
+            case 6: {
+                rewardrate.change_reward_rate(80,80,110,50,100,40);
+            }
+            break;
         }
     }
 
-
-    private static void defaultvalue() {
-        MiamiHotelDetails hotel1 = new MiamiHotelDetails("Lackwood", 3, 110, 110, 90, 90);
-        details.add(hotel1);
-        MiamiHotelDetails hotel2 = new MiamiHotelDetails("Bridgewood", 4, 150, 150, 50, 50);
-        details.add(hotel2);
-        MiamiHotelDetails hotel3 = new MiamiHotelDetails("Ridgewood", 5, 220, 220, 150, 150);
-        details.add(hotel3);
-    }
 
 
 }
